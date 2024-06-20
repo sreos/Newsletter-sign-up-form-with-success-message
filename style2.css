@@ -1,0 +1,47 @@
+:root {
+    --Tomato: hsl(4, 100%, 67%);
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --CharcoalGrey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh; 
+    background-color: var(--CharcoalGrey);
+    font-family: "Roboto";
+    
+}
+
+.container2 {
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: var(--White);
+    padding: 30px;
+    width: 350px;
+    height: 300px;
+}
+
+.head {
+    font-weight: 900;
+    color: var(--Dark-Slate-Grey);
+}
+
+.content {
+    color: var(--CharcoalGrey);
+}
+
+.btn {
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+    width: 330px;
+    height: 45px;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    color: var(--Dark-Slate-Grey);
+    background: var(--White);
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-4.12.0.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var form = document.querySelector('form');
+            var emailInput = document.getElementById('exampleTextInput');
+            var errorMessageDiv = document.createElement('div');
+            errorMessageDiv.className = 'error-message';
+            emailInput.parentNode.insertBefore(errorMessageDiv, emailInput);
+
+            form.onsubmit = function(event) {
+                event.preventDefault(); // Form gönderimini her durumda durdur
+
+                if (!emailInput.value.match(/^[^ ]+@[^ ]+\.[a-z]{2,3}$/)) {
+                    emailInput.classList.add('error-input');
+                    errorMessageDiv.textContent = 'Valid email required';
+                } else {
+                    emailInput.classList.remove('error-input');
+                    errorMessageDiv.textContent = '';
+                    // Başarılı form gönderimi - yönlendirme yap
+                    window.location.href = 'success.html';
+                }
+            };
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="container-without-img">
+            <div class="head">
+                <h2><strong>Stay updated!</strong></h2>
+            </div>
+            <div class="head-content">
+                <p>Join 60,000+ product managers receiving monthly updates on:</p>
+            </div>
+
+            <div class="lists">
+                <ul class="p-list">
+                    <div class="list-together">
+                        <img src="icon-list.svg" alt="tic" class="tic">
+                        <li class="p-list__item">Product discovery and building what matters</li>
+                    </div>
+                    <div class="list-together">
+                        <img src="icon-list.svg" alt="tic" class="tic">
+                        <li class="p-list__item">Measuring to ensure updates are a success</li>
+                    </div>
+                    <div class="list-together">
+                        <img src="icon-list.svg" alt="tic" class="tic">
+                        <li class="p-list__item">And much more!</li>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="form">
+                <form>
+                    <label for="exampleTextInput">Email address</label>
+                    <input type="email" id="exampleTextInput" name="exampleTextInput" placeholder="email@company.com" autocomplete="email">
+                    <button type="submit" class="btn-inside">Subscribe to monthly newsletter</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="image">
+            <img src="illustration-sign-up-desktop.svg" alt="illustration-sign-up-desktop">
+        </div>
+        
+        <div class="image-mobile">
+            <img src="illustration-sign-up-mobile.svg">
+        </div>
+    </div> 
+</body>
+</html>

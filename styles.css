@@ -1,0 +1,95 @@
+:root {
+
+--Tomato: hsl(4, 100%, 67%);
+--Dark-Slate-Grey: hsl(234, 29%, 20%);
+--CharcoalGrey: hsl(235, 18%, 26%);
+--Grey: hsl(231, 7%, 60%);
+--White: hsl(0, 0%, 100%);
+
+}
+
+html {
+    display: grid;
+    place-items: center;
+    min-height: 100vh; 
+    background-color: var(--CharcoalGrey);
+}
+
+body {
+    background-color: var(--CharcoalGrey);
+}
+
+.container {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 20px;
+    font-family: "Roboto";
+    font-weight: 500;
+    background-color: var(--White);
+}
+
+.container-without-img {
+    padding-top: 60px;
+    padding-left: 40px;
+    padding-right: 50px;
+    width: 450px;
+}
+
+.list-together {
+    display: flex;
+}
+
+.list-together li {
+    padding-left: 10px;
+}
+
+.btn-inside {
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+    width: 362px;
+    height: 45px;
+    border-radius: 5px;
+}
+
+input[type="email"] {
+    border: 1px solid var(--Grey);
+    border-radius: 5px;
+    height: 45px;
+}
+
+.btn-inside:hover {
+    color: var(--Dark-Slate-Grey);
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 5px;
+    font-size: 12px;
+    margin-left: 240px;
+}
+.error-input {
+    border-color: red;
+}
+
+
+@media (min-width: 1024px) {
+    .image-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .image {
+        display: none;
+    }
+
+    .image-mobile {
+        display: flex;
+    }
+
+    html {
+        display: flex;
+        
+    }
+}
